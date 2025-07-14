@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404Coin - The Lost Token</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
             box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
         }
-
+        
         :root {
             --glitch-blue: #4fc3f7;
             --glitch-purple: #9c27b0;
@@ -24,7 +24,7 @@
             --text-light: #e0e0ff;
             --text-gray: #a0a0c0;
         }
-
+        
         body {
             font-family: 'Share Tech Mono', monospace;
             background: linear-gradient(135deg, var(--dark-bg), var(--darker-bg));
@@ -35,7 +35,7 @@
             line-height: 1.6;
             background-attachment: fixed;
         }
-
+        
         /* Glitch effect container */
         .glitch-container {
             position: fixed;
@@ -47,7 +47,7 @@
             opacity: 0.1;
             overflow: hidden;
         }
-
+        
         .glitch-line {
             position: absolute;
             height: 1px;
@@ -56,14 +56,14 @@
             opacity: 0.1;
             animation: glitchLine 10s infinite linear;
         }
-
+        
         .glitch-box {
             position: absolute;
             border: 1px solid var(--glitch-purple);
             opacity: 0.05;
             animation: glitchBox 15s infinite linear;
         }
-
+        
         /* Header styles */
         header {
             padding: 1.5rem 1rem;
@@ -74,7 +74,7 @@
             overflow: hidden;
             backdrop-filter: blur(5px);
         }
-
+        
         .logo-container {
             display: flex;
             flex-direction: column;
@@ -83,20 +83,23 @@
             gap: 1rem;
             margin-bottom: 0.5rem;
         }
-
+        
         .logo-img {
             width: clamp(100px, 22vw, 180px);
-            height: clamp(100px, 22vw, 180px);
-            object-fit: contain;
-            border-radius: 50%;
-            background-color: #2e2e2f;
-            border: none;
-            box-shadow: 0 0 20px rgba(67, 67, 67, 0.5), 0 0 40px rgba(67, 67, 67, 0.5), 0 0 80px rgba(67, 67, 67, 0.5);
-            animation: float 6s ease-in-out infinite;
-            position: relative;
-            z-index: 10;
+    height: clamp(100px, 22vw, 180px);
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #2e2e2f;
+             border: none;
+    box-shadow: 0 0 20px rgba(67, 67, 67, 0.5),
+                0 0 40px rgba(67, 67, 67, 0.5),
+                0 0 80px rgba(67, 67, 67, 0.5);
+    animation: float 6s ease-in-out infinite;
+    position: relative;
+    z-index: 10;
+    
         }
-
+        
         .logo-img::before {
             content: "";
             position: absolute;
@@ -109,7 +112,7 @@
             animation: pulse 3s infinite;
             z-index: -1;
         }
-
+        
         h1 {
             font-family: 'Orbitron', sans-serif;
             font-size: clamp(1.8rem, 5vw, 3.5rem);
@@ -120,7 +123,7 @@
             position: relative;
             animation: glitch 2.5s infinite;
         }
-
+        
         .subtitle {
             font-size: clamp(0.9rem, 2.5vw, 1.3rem);
             color: var(--text-gray);
@@ -129,7 +132,7 @@
             line-height: 1.6;
             text-shadow: 0 0 5px rgba(79, 195, 247, 0.3);
         }
-
+        
         .tagline {
             color: var(--glitch-pink);
             font-weight: bold;
@@ -137,7 +140,7 @@
             margin-top: 0.5rem;
             display: block;
         }
-
+        
         /* Navigation */
         nav {
             background: rgba(30, 42, 63, 0.9);
@@ -150,7 +153,7 @@
             backdrop-filter: blur(5px);
             margin-top: 1rem;
         }
-
+        
         nav a {
             display: inline-block;
             margin: 0 0.8rem;
@@ -164,12 +167,12 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
+        
         nav a:hover {
             color: var(--glitch-blue);
             text-shadow: 0 0 10px rgba(79, 195, 247, 0.7);
         }
-
+        
         nav a::after {
             content: "";
             position: absolute;
@@ -180,11 +183,11 @@
             background: var(--glitch-blue);
             transition: width 0.3s ease;
         }
-
+        
         nav a:hover::after {
             width: 100%;
         }
-
+        
         /* Main content sections */
         section {
             max-width: min(1000px, 95%);
@@ -201,7 +204,7 @@
             backdrop-filter: blur(5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
-
+        
         section::before {
             content: "";
             position: absolute;
@@ -209,25 +212,25 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background:
+            background: 
                 linear-gradient(90deg, transparent 50%, rgba(79, 195, 247, 0.05) 50%),
                 linear-gradient(transparent 50%, rgba(79, 195, 247, 0.05) 50%);
             background-size: 15px 15px;
             z-index: -1;
             opacity: 0.2;
         }
-
+        
         section.visible {
             opacity: 1;
             transform: translateY(0);
         }
-
+        
         .card {
             padding: 1.5rem;
             position: relative;
             z-index: 2;
         }
-
+        
         h2 {
             font-family: 'Orbitron', sans-serif;
             color: #04cbfd;
@@ -239,7 +242,7 @@
             letter-spacing: 2px;
             text-transform: uppercase;
         }
-
+        
         h2::after {
             content: "";
             position: absolute;
@@ -250,7 +253,7 @@
             background: linear-gradient(90deg, var(--glitch-blue), var(--glitch-purple));
             border-radius: 3px;
         }
-
+        
         h3 {
             font-family: 'Orbitron', sans-serif;
             color: #18bfe9;
@@ -258,18 +261,18 @@
             font-size: clamp(1.2rem, 3.5vw, 1.8rem);
             text-shadow: none;
         }
-
+        
         p {
             margin-bottom: 1.2rem;
             font-size: clamp(0.95rem, 2.5vw, 1.1rem);
             color: var(--text-light);
             line-height: 1.7;
         }
-
+        
         strong {
             color: var(--glitch-blue);
         }
-
+        
         /* Tokenomics section */
         .tokenomics-grid {
             display: grid;
@@ -277,7 +280,7 @@
             gap: 1.5rem;
             margin-top: 1.5rem;
         }
-
+        
         .token-item {
             background: rgba(15, 27, 42, 0.5);
             padding: 1.5rem;
@@ -287,13 +290,13 @@
             overflow: hidden;
             transition: transform 0.3s ease;
         }
-
+        
         .token-item:hover {
             transform: translateY(-5px);
             border-color: var(--glitch-blue);
             box-shadow: 0 5px 15px rgba(79, 195, 247, 0.2);
         }
-
+        
         .token-item::before {
             content: "";
             position: absolute;
@@ -303,20 +306,20 @@
             height: 100%;
             background: linear-gradient(to bottom, var(--glitch-blue), var(--glitch-purple));
         }
-
+        
         .token-item h4 {
             color: var(--glitch-blue);
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
         }
-
+        
         /* Roadmap section */
         .roadmap ul {
             list-style: none;
             padding-left: 1.5rem;
             position: relative;
         }
-
+        
         .roadmap ul::before {
             content: "";
             position: absolute;
@@ -326,14 +329,14 @@
             width: 2px;
             background: linear-gradient(to bottom, var(--glitch-blue), transparent);
         }
-
+        
         .roadmap li {
             margin-bottom: 1.8rem;
             position: relative;
             padding-left: 2.5rem;
             font-size: 1.1rem;
         }
-
+        
         .roadmap li::before {
             content: ">";
             color: var(--glitch-blue);
@@ -343,7 +346,7 @@
             font-size: 1.5rem;
             text-shadow: 0 0 8px rgba(79, 195, 247, 0.7);
         }
-
+        
         .roadmap li::after {
             content: "";
             position: absolute;
@@ -355,14 +358,14 @@
             border-radius: 50%;
             z-index: 2;
         }
-
+        
         /* Launch zone */
         .launch-zone {
             text-align: center;
             margin-top: 1.5rem;
             position: relative;
         }
-
+        
         .launch-buttons {
             display: flex;
             flex-wrap: wrap;
@@ -370,7 +373,7 @@
             gap: 1.2rem;
             margin-top: 2rem;
         }
-
+        
         .launch-btn {
             display: inline-flex;
             align-items: center;
@@ -391,13 +394,13 @@
             box-shadow: 0 5px 15px rgba(79, 195, 247, 0.4);
             min-width: 220px;
         }
-
+        
         .launch-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(79, 195, 247, 0.6);
             background: linear-gradient(135deg, var(--glitch-purple), var(--glitch-blue));
         }
-
+        
         .contract-address {
             background: rgba(15, 27, 42, 0.7);
             padding: 1.5rem;
@@ -407,12 +410,12 @@
             border: 1px solid rgba(79, 195, 247, 0.3);
             position: relative;
         }
-
+        
         .contract-address h3 {
             margin-bottom: 1rem;
             color: var(--glitch-blue);
         }
-
+        
         .contract-address code {
             color: var(--text-light);
             word-break: break-all;
@@ -425,7 +428,7 @@
             border-radius: 8px;
             border: 1px solid rgba(79, 195, 247, 0.2);
         }
-
+        
         .copy-btn {
             padding: 0.8rem 1.8rem;
             border: none;
@@ -440,12 +443,12 @@
             letter-spacing: 1px;
             box-shadow: 0 5px 15px rgba(255, 42, 109, 0.4);
         }
-
+        
         .copy-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(255, 42, 109, 0.6);
         }
-
+        
         /* Footer */
         footer {
             text-align: center;
@@ -457,14 +460,14 @@
             margin-top: 3rem;
             backdrop-filter: blur(5px);
         }
-
+        
         .social-links {
             display: flex;
             justify-content: center;
             gap: 1.8rem;
             margin: 1.5rem 0;
         }
-
+        
         .social-links a {
             display: inline-flex;
             align-items: center;
@@ -478,98 +481,55 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(79, 195, 247, 0.3);
         }
-
+        
         .social-links a:hover {
             background: var(--glitch-blue);
             color: white;
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(79, 195, 247, 0.4);
         }
-
+        
         .copyright {
             margin-top: 1.5rem;
             color: var(--text-gray);
             font-size: 0.9rem;
         }
-
+        
         /* Animations */
         @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-15px);
-            }
-            100% {
-                transform: translateY(0px);
-            }
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
         }
-
+        
         @keyframes glitch {
-            0% {
-                text-shadow: 0 0 10px var(--glitch-blue), 0 0 20px rgba(79, 195, 247, 0.7);
-            }
-            2% {
-                text-shadow: -3px 0 var(--glitch-pink), 3px 0 var(--glitch-purple);
-            }
-            4% {
-                text-shadow: 0 0 10px var(--glitch-blue), 0 0 20px rgba(79, 195, 247, 0.7);
-            }
-            5% {
-                text-shadow: 3px 0 var(--glitch-pink), -3px 0 var(--glitch-purple);
-            }
-            6% {
-                text-shadow: 0 0 10px var(--glitch-blue), 0 0 20px rgba(79, 195, 247, 0.7);
-            }
-            100% {
-                text-shadow: 0 0 10px var(--glitch-blue), 0 0 20px rgba(79, 195, 247, 0.7);
-            }
+            0% { text-shadow: 0 0 10px var(--glitch-blue), 0 0 20px rgba(79, 195, 247, 0.7); }
+            2% { text-shadow: -3px 0 var(--glitch-pink), 3px 0 var(--glitch-purple); }
+            4% { text-shadow: 0 0 10px var(--glitch-blue), 0 0 20px rgba(79, 195, 247, 0.7); }
+            5% { text-shadow: 3px 0 var(--glitch-pink), -3px 0 var(--glitch-purple); }
+            6% { text-shadow: 0 0 10px var(--glitch-blue), 0 0 20px rgba(79, 195, 247, 0.7); }
+            100% { text-shadow: 0 0 10px var(--glitch-blue), 0 0 20px rgba(79, 195, 247, 0.7); }
         }
-
+        
         @keyframes pulse {
-            0% {
-                transform: scale(1);
-                opacity: 0.8;
-            }
-            50% {
-                transform: scale(1.05);
-                opacity: 0.5;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 0.8;
-            }
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 0.8; }
         }
-
+        
         @keyframes glitchLine {
-            0% {
-                transform: translateY(-100px);
-            }
-            100% {
-                transform: translateY(100vh);
-            }
+            0% { transform: translateY(-100px); }
+            100% { transform: translateY(100vh); }
         }
-
+        
         @keyframes glitchBox {
-            0% {
-                transform: translate(0, 0) rotate(0deg);
-                opacity: 0.05;
-            }
-            25% {
-                transform: translate(20px, 40px) rotate(10deg);
-            }
-            50% {
-                transform: translate(-20px, 80px) rotate(-10deg);
-            }
-            75% {
-                transform: translate(30px, 120px) rotate(5deg);
-            }
-            100% {
-                transform: translate(0, 160px) rotate(0deg);
-                opacity: 0;
-            }
+            0% { transform: translate(0, 0) rotate(0deg); opacity: 0.05; }
+            25% { transform: translate(20px, 40px) rotate(10deg); }
+            50% { transform: translate(-20px, 80px) rotate(-10deg); }
+            75% { transform: translate(30px, 120px) rotate(5deg); }
+            100% { transform: translate(0, 160px) rotate(0deg); opacity: 0; }
         }
-
+        
         /* Responsive adjustments */
         @media (max-width: 768px) {
             nav a {
@@ -577,50 +537,46 @@
                 padding: 0.5rem 0.8rem;
                 font-size: 0.9rem;
             }
-
+            
             .launch-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-
+            
             .tokenomics-grid {
                 grid-template-columns: 1fr;
             }
-
+            
             .logo-img {
                 width: 100px;
                 height: 100px;
             }
-
-            /* Mascot section adjustments for tablets */
-            #mascot > .card > div {
-                flex-direction: column;
-                align-items: center;
+        }
+        
+        @media (max-width: 480px) {
+            nav {
+                padding: 0.5rem;
             }
-            #mascot img {
-                max-width: 350px !important;
-                margin-bottom: 1.5rem;
+            
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
             }
-            #mascot > .card > div > div:last-child {
-                max-width: 100%;
-                text-align: center;
+            
+            .logo-container {
+                gap: 0.5rem;
             }
-
-            /* Adjust font sizes for better readability */
-            h1 {
-                font-size: 2.5rem;
+            
+            section {
+                padding: 1rem;
             }
-            h2 {
-                font-size: 1.8rem;
-            }
-            h3 {
-                font-size: 1.4rem;
-            }
-            p {
-                font-size: 1rem;
+            
+            .card {
+                padding: 1rem;
             }
         }
 
+        /* Added media query for iPhone navbar improvements */
         @media (max-width: 480px) {
             nav {
                 padding: 0.3rem 0.5rem;
@@ -633,7 +589,7 @@
                 top: 0;
                 z-index: 1000;
             }
-
+            
             nav a {
                 display: inline-block;
                 margin: 0 0.4rem;
@@ -641,18 +597,6 @@
                 font-size: 0.85rem;
                 line-height: 40px;
                 vertical-align: middle;
-            }
-
-            .logo-container {
-                gap: 0.5rem;
-            }
-
-            section {
-                padding: 1rem;
-            }
-
-            .card {
-                padding: 1rem;
             }
 
             /* Mascot section adjustments for phones */
@@ -688,14 +632,13 @@
 <body>
     <!-- Glitch effect background -->
     <div class="glitch-container" id="glitchContainer"></div>
-
+    
     <!-- Header -->
     <header>
         <div class="logo-container">
-            <img src="cropped_circle_image.png" alt="404 - THE LOST COIN Logo" class="logo-img" />
+            <img src="cropped_circle_image.png" alt="404 - THE LOST COIN Logo" class="logo-img">
             <h1>404 - THE LOST COIN</h1>
-            <p class="subtitle">
-                A revolutionary memecoin built on Binance Smart Chain<br />
+            <p class="subtitle">A revolutionary memecoin built on Binance Smart Chain<br>
                 <span class="tagline">Born not from success, but from failure itself</span>
             </p>
         </div>
@@ -715,10 +658,8 @@
     <section id="launch">
         <div class="card">
             <h2>LAUNCH ZONE</h2>
-            <p>
-                Join the revolution of the lost token. Acquire your 404Coin now and become part of the decentralized anomaly. The token that celebrates being lost, glitched, and absurd in a world obsessed with utility.
-            </p>
-
+            <p>Join the revolution of the lost token. Acquire your 404Coin now and become part of the decentralized anomaly. The token that celebrates being lost, glitched, and absurd in a world obsessed with utility.</p>
+            
             <div class="launch-buttons">
                 <a href="#" class="launch-btn">
                     <i class="fas fa-coins"></i> BUY ON PANCAKESWAP
@@ -733,7 +674,7 @@
                     <i class="fab fa-twitter"></i> FOLLOW ON X
                 </a>
             </div>
-
+            
             <div class="contract-address">
                 <h3>CONTRACT ADDRESS</h3>
                 <code id="contract">0x4040404040404040404040404040404040404040</code>
@@ -748,10 +689,8 @@
     <section id="tokenomics">
         <div class="card">
             <h2>TOKENOMICS</h2>
-            <p>
-                The 404Coin tokenomics are designed to embrace the chaos of the blockchain, ensuring a truly decentralized and unpredictable experience.
-            </p>
-
+            <p>The 404Coin tokenomics are designed to embrace the chaos of the blockchain, ensuring a truly decentralized and unpredictable experience.</p>
+            
             <div class="tokenomics-grid">
                 <div class="token-item">
                     <h4>TOTAL SUPPLY</h4>
@@ -789,10 +728,8 @@
     <section id="roadmap">
         <div class="card roadmap">
             <h2>ROADMAP</h2>
-            <p>
-                Our journey through the digital void is unpredictable, but we've charted a course through the chaos.
-            </p>
-
+            <p>Our journey through the digital void is unpredictable, but we've charted a course through the chaos.</p>
+            
             <ul>
                 <li><strong>Phase 1: Genesis</strong> - Token deployment, website launch, initial community building</li>
                 <li><strong>Phase 2: Discovery</strong> - PancakeSwap listing, CoinGecko & CoinMarketCap applications</li>
@@ -807,7 +744,7 @@
     <section id="about">
         <div class="card">
             <h2>ABOUT 404COIN</h2>
-
+            
             <h3>WHAT IS 404?</h3>
             <p>
                 404Coin is a revolutionary memecoin built on Binance Smart Chain — born not from success, but from failure itself. Taking inspiration from the legendary 404 Error - Page Not Found, this coin symbolizes the unpredictable, chaotic, and often hilarious side of the internet.
@@ -846,17 +783,12 @@
             <h2>MEET 404BOT</h2>
             <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-top: 2rem;">
                 <div style="flex: 1; min-width: 300px; text-align: center;">
-                    <img
-                        src="de64bc8b-8ff7-4d49-8da8-49f98855d0ea_removalai_preview.png"
-                        alt="404Bot - The Lost Mascot"
-                        style="width: 100%; max-width: 450px; margin: 0 auto"
-                    />
+                    <img src="de64bc8b-8ff7-4d49-8da8-49f98855d0ea_removalai_preview.png" 
+                         alt="404Bot - The Lost Mascot" style="width: 100%; max-width: 450px; margin: 0 auto;">
                 </div>
                 <div style="flex: 1; min-width: 300px;">
                     <h3>OUR DIGITAL GHOST</h3>
-                    <p>
-                        404Bot is the official mascot of 404Coin, representing our journey through the chaotic digital landscape. Just like your tokens during network congestion, 404Bot is often lost but never forgotten.
-                    </p>
+                    <p>404Bot is the official mascot of 404Coin, representing our journey through the chaotic digital landscape. Just like your tokens during network congestion, 404Bot is often lost but never forgotten.</p>
                     <p>This broken but endearing robot symbolizes:</p>
                     <ul style="margin: 1rem 0 1rem 2rem;">
                         <li>The unpredictable nature of crypto</li>
@@ -864,9 +796,7 @@
                         <li>The humor in technological failures</li>
                         <li>The resilience of decentralized communities</li>
                     </ul>
-                    <p>
-                        In Q4 2025, we'll be launching the exclusive 404Bot NFT collection, featuring unique digital artifacts of our beloved mascot in various lost locations across the metaverse.
-                    </p>
+                    <p>In Q4 2025, we'll be launching the exclusive 404Bot NFT collection, featuring unique digital artifacts of our beloved mascot in various lost locations across the metaverse.</p>
                 </div>
             </div>
         </div>
@@ -877,40 +807,30 @@
         <div class="card">
             <h2>HOW TO BUY 404COIN</h2>
             <p>Getting lost has never been easier! Follow these simple steps to acquire your 404Coin:</p>
-
+            
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                <div
-                    style="background: rgba(15, 27, 42, 0.5); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(79, 195, 247, 0.3);"
-                >
+                <div style="background: rgba(15, 27, 42, 0.5); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(79, 195, 247, 0.3);">
                     <h3 style="color: var(--glitch-blue);">STEP 1</h3>
                     <p>Get BNB (Binance Coin) from any major exchange</p>
                 </div>
-                <div
-                    style="background: rgba(15, 27, 42, 0.5); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(79, 195, 247, 0.3);"
-                >
+                <div style="background: rgba(15, 27, 42, 0.5); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(79, 195, 247, 0.3);">
                     <h3 style="color: var(--glitch-blue);">STEP 2</h3>
                     <p>Send BNB to your wallet (Trust Wallet, MetaMask, etc.)</p>
                 </div>
-                <div
-                    style="background: rgba(15, 27, 42, 0.5); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(79, 195, 247, 0.3);"
-                >
+                <div style="background: rgba(15, 27, 42, 0.5); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(79, 195, 247, 0.3);">
                     <h3 style="color: var(--glitch-blue);">STEP 3</h3>
                     <p>Go to PancakeSwap and connect your wallet</p>
                 </div>
-                <div
-                    style="background: rgba(15, 27, 42, 0.5); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(79, 195, 247, 0.3);"
-                >
+                <div style="background: rgba(15, 27, 42, 0.5); padding: 1.5rem; border-radius: 10px; border: 1px solid rgba(79, 195, 247, 0.3);">
                     <h3 style="color: var(--glitch-blue);">STEP 4</h3>
                     <p>Swap BNB for 404Coin using our contract address</p>
                 </div>
             </div>
-
+            
             <div style="margin-top: 2rem; text-align: center;">
                 <p>Still lost? Watch our tutorial video:</p>
-                <div
-                    style="max-width: 600px; height: 200px; background: rgba(15, 27, 42, 0.7); margin: 1.5rem auto; border-radius: 10px; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--glitch-blue);"
-                >
-                    <i class="fas fa-play-circle" style="font-size: 4rem; color: var(--glitch-blue); opacity: 0.5"></i>
+                <div style="max-width: 600px; height: 200px; background: rgba(15, 27, 42, 0.7); margin: 1.5rem auto; border-radius: 10px; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--glitch-blue);">
+                    <i class="fas fa-play-circle" style="font-size: 4rem; color: var(--glitch-blue); opacity: 0.5;"></i>
                 </div>
             </div>
         </div>
@@ -921,8 +841,8 @@
         <div class="card">
             <h2>CONTACT US</h2>
             <p>Lost in the matrix? Have questions about 404Coin? Reach out to our support team or join our community channels.</p>
-
-            <div class="launch-buttons" style="margin-top: 2rem">
+            
+            <div class="launch-buttons" style="margin-top: 2rem;">
                 <a href="mailto:contact@404coin.com" class="launch-btn">
                     <i class="fas fa-envelope"></i> EMAIL SUPPORT
                 </a>
@@ -933,13 +853,120 @@
                     <i class="fab fa-twitter"></i> TWITTER/X
                 </a>
             </div>
+            
+            <div style="margin-top: 3rem; text-align: center;">
+                <h3>SUBSCRIBE FOR UPDATES</h3>
+                <p>Get the latest news about 404Coin directly to your inbox</p>
+                <div style="max-width: 500px; margin: 1.5rem auto; display: flex; gap: 10px;">
+                    <input type="email" placeholder="Your email address" style="flex: 1; padding: 0.8rem 1.2rem; background: rgba(15, 27, 42, 0.7); border: 1px solid rgba(79, 195, 247, 0.3); border-radius: 8px; color: white; font-family: 'Share Tech Mono', monospace;">
+                    <button style="padding: 0.8rem 1.8rem; background: linear-gradient(135deg, var(--glitch-pink), #ff4081); color: white; border: none; border-radius: 8px; cursor: pointer; font-family: 'Orbitron', sans-serif; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">SUBSCRIBE</button>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
-        <img
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Crect width='200' height='60' fill='transparent'/%3E%3Ctext x='100' y='35' font-family='Orbitron' font-size='20' fill='%234fc3f7' text-anchor='middle'%3E404COIN%3C/text%3E%3C/svg%3E"
-            alt="404Coin"
-            style="height: 40px; margin-bottom: 1.5rem"
-        />
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Crect width='200' height='60' fill='transparent'/%3E%3Ctext x='100' y='35' font-family='Orbitron' font-size='20' fill='%234fc3f7' text-anchor='middle'%3E404COIN%3C/text%3E%3C/svg%3E" 
+             alt="404Coin" style="height: 40px; margin-bottom: 1.5rem;">
         <p>The revolutionary memecoin that celebrates the chaotic side of the internet</p>
+        
+        <div class="social-links">
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-medium"></i></a>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 404COIN. ALL RIGHTS LOST. POWERED BY CONFUSION AND MEMES.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">The future is unpredictable - embrace the void</p>
+        </div>
+    </footer>
+
+    <script>
+        // Create glitch background
+        function createGlitchBackground() {
+            const container = document.getElementById('glitchContainer');
+            
+            // Create glitch lines
+            for (let i = 0; i < 30; i++) {
+                const line = document.createElement('div');
+                line.classList.add('glitch-line');
+                line.style.top = Math.random() * 100 + 'vh';
+                line.style.left = '0';
+                line.style.width = '100%';
+                line.style.height = Math.random() * 2 + 'px';
+                line.style.animationDelay = Math.random() * 5 + 's';
+                line.style.animationDuration = (5 + Math.random() * 10) + 's';
+                container.appendChild(line);
+            }
+            
+            // Create glitch boxes
+            for (let i = 0; i < 15; i++) {
+                const box = document.createElement('div');
+                box.classList.add('glitch-box');
+                box.style.top = Math.random() * 100 + 'vh';
+                box.style.left = Math.random() * 100 + 'vw';
+                box.style.width = (20 + Math.random() * 80) + 'px';
+                box.style.height = (20 + Math.random() * 80) + 'px';
+                box.style.animationDelay = Math.random() * 5 + 's';
+                box.style.animationDuration = (10 + Math.random() * 20) + 's';
+                container.appendChild(box);
+            }
+        }
+        
+        // Animation for sections on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create glitch background
+            createGlitchBackground();
+            
+            // Smooth scrolling
+            document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Scroll animations
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Copy contract address
+            window.copyAddress = function() {
+                const text = document.getElementById("contract").innerText;
+                navigator.clipboard.writeText(text).then(() => {
+                    alert("Contract address copied to clipboard!");
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                    alert("Failed to copy address. Please copy it manually.");
+                });
+            };
+        });
+        
+        // Resize glitch elements on window resize
+        window.addEventListener('resize', function() {
+            const container = document.getElementById('glitchContainer');
+            container.innerHTML = '';
+            createGlitchBackground();
+        });
+    </script>
+</body>
+</html>
